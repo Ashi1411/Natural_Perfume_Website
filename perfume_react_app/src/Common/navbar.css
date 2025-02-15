@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+img{
+    width: 200px;
+}
+
+li{
+    font-size: 2.4rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 24px 5px;
+}
+
+.nav-items{
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+
+    &:hover{
+        color: white;
+
+    }
+}

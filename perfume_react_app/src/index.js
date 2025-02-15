@@ -1,13 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './Pages/Home';
+import Aboutus from './Pages/Aboutus';
+import Collection from './Pages/Collection';
+import Contact from './Pages/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+let allRoutes = createBrowserRouter(
+  [
+    // static routing
+    {
+      path:'/',
+      element:<Home></Home>
+    },
+    {
+      path:'about-us',
+      element:<Aboutus></Aboutus>
+    },
+    {
+      path:'course',
+      element:<Collection></Collection>
+    },
+    {
+      path:'blog',
+      element:<Contact></Contact>
+    },
+    // // dynamic routing
+    // {
+    //   path:'blog/:id',
+    //   element:<BlogDetails></BlogDetails>
+    // },
+    // // Error Page
+    // {
+    //   path:'*',
+    //   element:<Error404></Error404>
+    // }
+  ]
+)
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router = {allRoutes}></RouterProvider>
   </React.StrictMode>
 );
 

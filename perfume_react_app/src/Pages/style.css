@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Playfair Display", serif;
+    line-height: 1.5;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.section-hero-heading{
+
+}
+
+
+/***** Hero Section *****/ 
+.hero-section{
+    background-image: linear-gradient(to top right, 
+    #eb84db,
+    #da8ecf,
+    #e190d5,
+    #ffb3fb,
+    #ebf3fe);
+
+}
+
+.hero-section-content{
+    padding: 10rem 4.2rem;
+}
+
+.section-hero-heading{
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    /* padding: 1.2rem; */
+    /* color: #e682d7; */
+}
+
+.section-hero-title{
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 2.8rem;
+    /* padding: 2.2rem; */
+    /* color: #e682d7; */
+}
+
+.hero-button{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #8093f1;
+    padding: 1.2rem 3.2rem;
+    margin: 4.8rem 2.4rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+
+    &:hover{
+        background-color: #8539e8;
+        color: white;
+   
+    }
+}
+
+/***** End Hero Section *****/
