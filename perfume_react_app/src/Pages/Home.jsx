@@ -3,8 +3,13 @@ import Navbar from "../Common/Navbar";
 import './style.css';
 import hero_image from "../images/hero_image.webp"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import {faHandHoldingDollar, faHeadset, faRotate, faTruckFast} from "@fortawesome/free-solid-svg-icons"
 import Category_icon from "../Category_icon";
+import reviews from "../APIs/reviews";
+import brands from "../APIs/brands";
+import weblogo from "../images/logo.png"
+import perfumeCategories from "../APIs/categories";
 
 
 export default function Home() {
@@ -98,12 +103,89 @@ export default function Home() {
       <section>
         <h1 className="text-[4.2rem] font-[600] p-[4.2rem]">Top Categories</h1>
 
-        
         <div>
           <Category_icon></Category_icon>
         </div>
         
       </section>
+
+      <section>
+        <h1 className="text-[4.2rem] font-[600] p-[4.2rem]">Customer Reviews</h1>
+        <div className="grid grid-cols-2">
+          {reviews.map((v, i) => {
+            return (
+              <div key={i} className="review-card">
+                <h1 className="text-[3.2rem] font-[500]">{v.customerName}</h1>
+                <p className="text-[2.4rem] p-[2rem]">{v.review}</p>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
+      <section>
+        <h1 className="text-[4.2rem] font-[600] p-[4.2rem]">Our Top Brands</h1>
+        <div className="grid grid-cols-4 gap-[10rem]">
+          {
+            brands.map((v, i) => {
+              return(
+                <div className="brands-card">
+                  <img src={v.image}></img>
+                  <p>{v.brand}</p>
+                </div>
+              )
+            })
+          }
+        </div>
+      </section>
+
+      <footer>
+        <div className="footer-class grid grid-cols-4 gap-[10rem] bg-[#464545]">
+          <div>
+            <img src={weblogo}></img>
+            <p>Welcome to Perfumora! Symphony of Natural Scents</p>
+            <div className="grid grid-cols-3">
+            <FontAwesomeIcon icon={faYoutube} className="footer-icons"/>
+            <FontAwesomeIcon icon={faInstagram} className="footer-icons"/>
+            <FontAwesomeIcon icon={faFacebook} className="footer-icons"/>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="text-[2.4rem] font-[600] p-[2.1rem] text-white">Categories</h1>
+            {perfumeCategories.map((v, i) => {
+                return (
+                    <div key={i}>
+                        <p>{v.category}</p>
+                    </div>
+                )
+            })}
+          </div>
+
+          <div>
+            <h1 className="text-[2.4rem] font-[600] p-[2.1rem] text-white">Top Brands</h1>
+            {brands.map((v, i) => {
+                return(
+                  <div >
+                    <p>{v.brand}</p>
+                  </div>
+                )
+              })
+            }
+            </div>
+
+            <div>
+            <h1 className="text-[2.4rem] font-[600] p-[2.1rem] text-white">Quick Links</h1>
+              <ul className="quick-links">
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Return & Refund Policy</li>
+                <li>Become An Affiliate</li>
+                <li>Shipping policy</li>
+              </ul>
+            </div>
+        </div>
+      </footer>
       
     </div>
   );

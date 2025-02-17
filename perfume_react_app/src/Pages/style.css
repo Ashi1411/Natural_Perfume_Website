@@ -137,6 +137,7 @@ li{
 
 
     & img{
+        cursor: pointer;
         margin: 0 auto;
         width: 25rem;
         height: 25rem;
@@ -165,3 +166,80 @@ li{
     }
 }
 /***** End Category Section *****/
+
+
+/***** review Section *****/ 
+.review-card{
+    padding: 4.2rem;
+    margin: 4.2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 0px;
+}
+/***** End review Section *****/
+
+
+/***** Brands Section *****/ 
+.brands-card{
+    padding: 4.2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 0px;
+
+    & img{
+        width: 20rem;
+        height: 20rem;
+        margin: 0 auto;
+    }
+
+    & p{
+        text-align: center;
+        padding: 2.4rem;
+    }
+}
+/***** End Brands Section *****/
+
+
+/***** footer Section *****/ 
+.footer-icons{
+    font-size: 4.2rem;
+    background-color: white;
+    margin: 2.4rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+
+    &:hover{
+        rotate: 360deg;
+        color: white;
+        background-color: black;
+    }
+}
+
+.footer-class{
+    padding: 4.2rem;
+
+    & img{
+        margin: 2.4rem;
+        width: 15rem;
+    }
+
+    & p{
+        margin: 2.4rem;
+        color: white;
+    }
+}
+
+.quick-links{
+    color: white;
+    & li{
+        padding: 2.4rem;
+        font-size: 2.2rem;
+    }
+}
+
+/***** End footer Section *****/

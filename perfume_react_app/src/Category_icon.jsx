@@ -7,7 +7,7 @@ export default function Category_icon() {
         <div className="grid grid-cols-4 gap-[10rem]">
             {perfumeCategories.map((v, i) => {
                 return (
-                    <div className="product-categories">
+                    <div key={i} className="product-categories">
                         <img src={v.image}></img>
                         <p>{v.category}</p>
                     </div>
