@@ -96,3 +96,72 @@ li{
 }
 
 /***** End Hero Section *****/
+
+
+
+/***** Properties Section *****/ 
+.properties-section{
+    margin: 10rem;
+}
+
+.property-icon{
+    width: 5rem;
+}
+
+.properties-icon{
+    font-size: 5rem;
+    padding: 1.2rem;
+    color: #6e00fe;
+    
+}
+
+.properties-card{
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 0px;
+    display: flex;
+
+    & h1{
+        font-size: 2.4rem;
+    }
+    & p{
+        font-size: 1.6rem;
+    }
+}
+/***** End Properties Section *****/
+
+
+/***** Category Section *****/ 
+.product-categories{
+    padding: 4.2rem;
+
+
+    & img{
+        margin: 0 auto;
+        width: 25rem;
+        height: 25rem;
+        box-shadow: rgba(100, 100, 111, 0.5) 2px 7px 29px 0px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        transition: all linear 0.5s;
+        -webkit-transition: all linear 0.3s;
+        -moz-transition: all linear 0.5s;
+        -ms-transition: all linear 0.5s;
+        -o-transition: all linear 0.5s;
+
+        &:hover{
+            scale: 1.1;
+        }
+}
+
+    & p{
+        padding: 3rem;
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+/***** End Category Section *****/
