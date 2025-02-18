@@ -125,7 +125,7 @@ export default function Home() {
 
       <section>
         <h1 className="text-[4.2rem] font-[600] p-[4.2rem]">Our Top Brands</h1>
-        <div className="grid grid-cols-4 gap-[10rem]">
+        <div className="grid grid-cols-4 gap-[5rem]">
           {
             brands.map((v, i) => {
               return(
@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-class grid grid-cols-4 gap-[10rem] bg-[#464545]">
+        <div className="footer-class grid grid-cols-4 gap-[10rem] bg-[#464545] mt-[30rem]">
           <div>
             <img src={weblogo}></img>
             <p>Welcome to Perfumora! Symphony of Natural Scents</p>

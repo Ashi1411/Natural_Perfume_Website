@@ -179,6 +179,7 @@ li{
 
 /***** Brands Section *****/ 
 .brands-card{
+    margin: 4.2rem;
     padding: 4.2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 0px;
 
