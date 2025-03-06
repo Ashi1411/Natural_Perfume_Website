@@ -7,6 +7,9 @@ import Home from './Pages/Home';
 import Aboutus from './Pages/Aboutus';
 import Collection from './Pages/Collection';
 import Contact from './Pages/Contact';
+import Products from './Products';
+import ProdDetails from './ProdDetails';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,18 +25,19 @@ let allRoutes = createBrowserRouter(
       element:<Aboutus></Aboutus>
     },
     {
-      path:'course',
-      element:<Collection></Collection>
-    },
-    {
       path:'blog',
       element:<Contact></Contact>
     },
-    // // dynamic routing
-    // {
-    //   path:'blog/:id',
-    //   element:<BlogDetails></BlogDetails>
-    // },
+    // dynamic routing
+    {
+      path:'products/:id',
+      element:<Products></Products>
+    },
+    // dynamic routing
+    {
+      path:'prodDetails/:id',
+      element:<ProdDetails></ProdDetails>
+    },
     // // Error Page
     // {
     //   path:'*',

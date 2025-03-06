@@ -1,6 +1,7 @@
 import React from 'react'
 import perfumeCategories from './APIs/categories'
-import ShowProducts from './ShowProducts'
+// import ShowProducts from './ShowProducts'
+import { Link } from 'react-router-dom'
 
 export default function Category_icon() {
   return (
@@ -9,8 +10,10 @@ export default function Category_icon() {
             {perfumeCategories.map((v, i) => {
                 return (
                     <div key={i} className="product-categories">
-                        <img src={v.image} onClick={() => ShowProducts(i)}></img>
+                        <Link to={`/products/${i}`}>
+                        <img src={v.image}></img>
                         <p>{v.category}</p>
+                        </Link>
                     </div>
                 )
             })}

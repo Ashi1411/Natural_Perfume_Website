@@ -1,0 +1,175 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Playfair Display", serif;
+    line-height: 1.5;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+}
+
+/***** Products page Section *****/
+
+.grid{
+    display: grid;
+}
+
+.grid-four-cols{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.prodclass{
+    & h1{
+        margin: 4.2rem;
+        font-size: 4.2rem;
+        font-weight: 600;
+    }
+}
+
+.prodCard{
+    margin: auto;
+    width: 38rem;
+    height: 57rem;
+    margin-top: 4.2rem;
+    padding: 2.4rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 0px;
+    border-radius: 2.5rem;
+    -webkit-border-radius: 2.5rem;
+    -moz-border-radius: 2.5rem;
+    -ms-border-radius: 2.5rem;
+    -o-border-radius: 2.5rem;
+
+    & img{
+        width: 32rem;
+        margin: auto;
+        height: 20rem;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+    }
+
+    & .prodCardInfo{
+        padding: 1.2rem;
+        & h1{
+            font-size: 2.4rem;
+            font-weight: 500;
+        }
+
+        & p{
+            padding: 0.5rem;
+        }
+
+        & button{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border: 0.1rem solid rgb(26, 19, 19);
+            padding: 0.8rem;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: 2rem;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+            transition: all 0.3s linear;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -ms-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+
+            &:hover{
+                background-color: #8539e8;
+                border: 0.1rem solid #8539e8;
+                color: white;
+            }
+        }
+    }
+}
+  /***** End Products page Section *****/
+
+
+  & .quantity{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 0.1rem solid rgb(26, 19, 19);
+
+    & p{
+        padding: 0.2rem;
+        margin: auto;
+    }
+    
+}
+
+hr {
+    border: 0.01rem solid black;
+}
+/***** One Product Details Section *****/ 
+.prodDetails{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem;
+    gap: 10rem;
+
+    & img{
+        width: 130rem;
+        height: 90rem;
+    }
+
+    & h1{
+        margin-top: 15rem;
+        font-size: 6.2rem;
+        font-weight: 600;
+    }
+    & p{
+        margin-top: 5rem;
+        font-size: 3rem;
+    }
+
+    & .quantity{
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0px;
+        border: 0.1rem solid rgb(26, 19, 19);
+    
+        & button{
+            font-size: 3rem;
+            padding: 0.2rem;
+            margin: auto;
+        }
+        
+    }
+
+    & .addtocartButton{
+        margin-top: 5rem;
+        font-size: 3rem;
+        padding: 1.5rem;
+        background-color: #8093f1;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+
+        &:hover{
+            background-color: #8539e8;
+            color: white;
+        }
+    }
+}
+/***** End One Product Details Section *****/

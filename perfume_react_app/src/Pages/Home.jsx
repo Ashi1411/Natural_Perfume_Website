@@ -129,7 +129,7 @@ export default function Home() {
           {
             brands.map((v, i) => {
               return(
-                <div className="brands-card">
+                <div key={i} className="brands-card">
                   <img src={v.image}></img>
                   <p>{v.brand}</p>
                 </div>
@@ -166,7 +166,7 @@ export default function Home() {
             <h1 className="text-[2.4rem] font-[600] p-[2.1rem] text-white">Top Brands</h1>
             {brands.map((v, i) => {
                 return(
-                  <div >
+                  <div key={i} >
                     <p>{v.brand}</p>
                   </div>
                 )
