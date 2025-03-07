@@ -123,6 +123,7 @@ hr {
     & img{
         width: 130rem;
         height: 90rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 20px;
     }
 
     & h1{
@@ -133,6 +134,10 @@ hr {
     & p{
         margin-top: 5rem;
         font-size: 3rem;
+    }
+
+    & .rating-star{
+        color: yellow;
     }
 
     & .quantity{
@@ -151,7 +156,35 @@ hr {
     }
 
     & .addtocartButton{
+        /* display: block; */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
         margin-top: 5rem;
+        font-size: 3rem;
+        padding: 1.5rem;
+        background-color: #8093f1;
+        margin: 2.4rem;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+
+        &:hover{
+            background-color: #8539e8;
+            color: white;
+        }
+    }
+
+    & .buyNowButton{
+        /* display: block; */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
+        margin-top: 5rem;
+        margin: 2.4rem;
         font-size: 3rem;
         padding: 1.5rem;
         background-color: #8093f1;
@@ -173,3 +206,71 @@ hr {
     }
 }
 /***** End One Product Details Section *****/
+
+
+/***** Cart Section *****/ 
+.cart{
+    margin: 8rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
+    padding: 2rem;
+    /* margin: auto; */
+
+    & div{
+        /* margin: 2rem; */
+        margin: auto;
+    }
+
+    & .categories{
+        margin: 0.3rem;
+    }
+
+    & img{
+        width: 20rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
+        height: 15rem;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+}
+
+    & .quantity{
+        width: 18rem;
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0px;
+        border: 0.1rem solid rgb(26, 19, 19);
+        height: 4rem;
+    
+        & button{
+            font-size: 2rem;
+            padding: 0.2rem;
+            margin: auto;
+        }
+        
+    }
+
+    & .remove-btn{
+        font-size: 2rem;
+        background-color: #8093f1;
+        padding: 1.2rem;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+
+        &:hover{
+            background-color: #8539e8;
+            color: white;
+        }
+    }
+}
+/***** End Cart Section *****/

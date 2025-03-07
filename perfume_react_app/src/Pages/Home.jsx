@@ -12,7 +12,13 @@ import weblogo from "../images/logo.png"
 import perfumeCategories from "../APIs/categories";
 
 
+
 export default function Home() {
+
+  if (!localStorage.getItem("addToCart")){
+    localStorage.setItem("addToCart", []);
+  }
+  
   return (
     <div>
       <Navbar></Navbar>

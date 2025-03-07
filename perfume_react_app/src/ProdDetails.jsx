@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import perfumes from './APIs/products';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
+import AddToCart from './AddToCart';
+import "./extra.css";
 
 export default function ProdDetails() {
 
@@ -9,7 +13,28 @@ export default function ProdDetails() {
     let currentId = uselocation.pathname.split('/')[2];
     
     let details = perfumes[currentId-1];
-    console.log(details);
+
+    let [quantity, setQuantity] = useState(0);
+
+    let setQuant = (event) => {
+        if (event.target.innerText === '+'){
+            quantity = (quantity === details.quantity )
+            ? 
+            quantity =  details.quantity
+            :
+            quantity = quantity + 1
+        }
+        else{
+
+            quantity = (quantity === 0 )
+            ? 
+            quantity = 0 
+            :
+            quantity = quantity - 1
+        }
+        setQuantity(quantity);
+    }
+    
 
   return (
     <div className='prodDetails'>
@@ -18,7 +43,7 @@ export default function ProdDetails() {
         </div>
         <div className='prodDetailsInfo'>
         <h1>{details.name}</h1>
-        <p>Ratings : </p>
+        <p>Ratings : 5 <FontAwesomeIcon className='rating-star' icon={faStar} /></p>
         <p>{details.description}</p>
         <hr></hr>
         <p>₹{details.price}</p>
@@ -28,14 +53,19 @@ export default function ProdDetails() {
             <p>Quantity</p>
         
             <div className='quantity'>
-                <button>-</button>
-                <button>0</button>
-                <button>+</button>
+                <button onClick={setQuant}
+                > - </button>
+                <button> {quantity} </button>
+                <button onClick={setQuant}
+                > + </button>
             </div>
         </div>
 
-        <button className='addtocartButton'>
-            Add to Cart
+        <button className='addtocartButton' onClick={() => {AddToCart(details, quantity)}}>
+            Add to Cart <FontAwesomeIcon icon={faCartShopping} />
+        </button>
+        <button className='buyNowButton'>
+            Buy Now
         </button>
         </div>
     </div>

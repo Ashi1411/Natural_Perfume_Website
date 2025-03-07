@@ -9,6 +9,7 @@ import Collection from './Pages/Collection';
 import Contact from './Pages/Contact';
 import Products from './Products';
 import ProdDetails from './ProdDetails';
+import Cart from './Cart';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,10 @@ let allRoutes = createBrowserRouter(
     {
       path:'blog',
       element:<Contact></Contact>
+    },
+    {
+      path:'cart',
+      element:<Cart></Cart>
     },
     // dynamic routing
     {
