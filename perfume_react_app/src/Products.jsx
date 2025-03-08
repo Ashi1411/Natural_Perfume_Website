@@ -29,7 +29,7 @@ export default function Products() {
            <div className='grid grid-four-cols'>
                 {products.map((prod, i) => {
                     return(
-                        <div className='prodCard'>
+                        <div key={i} className='prodCard'>
                             <div className='prodCardImg'>
                                 <img src={prod.image}></img>
                             </div>

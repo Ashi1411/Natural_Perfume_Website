@@ -244,3 +244,35 @@ li{
 }
 
 /***** End footer Section *****/
+
+
+/***** About-us page Section *****/ 
+.about-us{
+    margin: 10rem;
+    & h1{
+        font-weight: 600;
+        padding: 1rem;
+        font-size: 4rem;
+    }
+    & h2{
+        margin-top: 2rem;
+        font-weight: 500;
+        padding: 1rem;
+        font-size: 3rem;
+    }
+    & h3{
+        margin-top: 2rem;
+        font-weight: 400;
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+    & p{
+        margin-left: 3rem;
+        margin-right: 3rem;
+        /* font-weight: 600; */
+        padding: 1rem;
+        /* font-size: 4rem; */
+    }
+}
+/***** End About-us page Section *****/
+

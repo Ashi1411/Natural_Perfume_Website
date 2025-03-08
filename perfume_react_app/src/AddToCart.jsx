@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 export default function AddToCart(details, quant) {
   let storedCart = localStorage.getItem("addToCart");
   let listLocalStorage = storedCart ? JSON.parse(storedCart) : [];

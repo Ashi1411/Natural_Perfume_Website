@@ -3,13 +3,12 @@ import Navbar from "../Common/Navbar";
 import './style.css';
 import hero_image from "../images/hero_image.webp"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import {faHandHoldingDollar, faHeadset, faRotate, faTruckFast} from "@fortawesome/free-solid-svg-icons"
 import Category_icon from "../Category_icon";
 import reviews from "../APIs/reviews";
 import brands from "../APIs/brands";
-import weblogo from "../images/logo.png"
-import perfumeCategories from "../APIs/categories";
+import Footer from "../Common/Footer";
+import { Link } from "react-router-dom";
 
 
 
@@ -40,9 +39,11 @@ export default function Home() {
               exotic spices to create timeless scents that captivate your soul.
             </p>
 
+            <Link to={'/collection'}>
             <button className="hero-button">
-              View Our Products
+            View Our Products
             </button>
+            </Link>
           </div>
           <div>
             <img src={hero_image} className="w-[600px] h-[400]" alt="Hero Section Image"></img>
@@ -145,7 +146,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
+      {/* <footer>
         <div className="footer-class grid grid-cols-4 gap-[10rem] bg-[#464545] mt-[30rem]">
           <div>
             <img src={weblogo}></img>
@@ -191,7 +192,8 @@ export default function Home() {
               </ul>
             </div>
         </div>
-      </footer>
+      </footer> */}
+      <Footer></Footer>
       
     </div>
   );

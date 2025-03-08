@@ -1,18 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Common/Navbar'
 import perfumes from './APIs/products';
 import "./extra.css";
 import Remove from './Remove';
 
 export default function Cart() {
-    let storedCart = localStorage.getItem("addToCart");
-    let listLocalStorage = storedCart ? JSON.parse(storedCart) : [];
-    listLocalStorage = [...listLocalStorage];
+
+    
+
+    const [cartItems, setCartItems] = useState([]);
+
+    // let storedCart = localStorage.getItem("addToCart");
+    // let listLocalStorage = storedCart ? JSON.parse(storedCart) : [];
+    // listLocalStorage = [...listLocalStorage];
+
+    useEffect(() => {
+        let storedCart = localStorage.getItem("addToCart");
+        setCartItems(storedCart ? JSON.parse(storedCart) : []);
+    }, []);
+
+    let filterProducts = cartItems.filter((v) => 
+        perfumes.some((curElem) => {
+            if(curElem.id === v.id){
+                return v
+            }})
+    );
 
 
-    let filterProducts = perfumes.filter((v, i) => {
-        return listLocalStorage.some((curElem) => curElem.id === v.id);
-    })
+    // let filterProducts = perfumes.filter((v, i) => {
+    //     return listLocalStorage.some((curElem) => curElem.id === v.id);
+    // })
+
+    let handleRemove = (id) => {
+        Remove(id, setCartItems)
+    }
     
 
   return ( 
@@ -21,12 +42,12 @@ export default function Cart() {
 
         {filterProducts.map((prod, i) => {
             return(
-                <div className='grid grid-cols-7 cart'>
+                <div key={i} className='grid grid-cols-7 cart'>
                     <div>
                     <p className='font-[600]'>Categories</p>
                         {prod.categories.map((cat, i) => {
                             return (
-                                <div className='categories'>
+                                <div key={i} className='categories'>
                                     <p>{cat}</p>
                                 </div>
                             )
@@ -51,7 +72,7 @@ export default function Cart() {
                         <button> + </button>
                     </div>
                     <div>
-                        <button className='font-[600] remove-btn' onClick={Remove}>
+                        <button className='font-[600] remove-btn' onClick={() => handleRemove(prod.id)}>
                             Remove
                         </button>
                     </div>

@@ -10,6 +10,7 @@ import Contact from './Pages/Contact';
 import Products from './Products';
 import ProdDetails from './ProdDetails';
 import Cart from './Cart';
+import BuyNow from './BuyNow';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -24,6 +25,9 @@ let allRoutes = createBrowserRouter(
     {
       path:'about-us',
       element:<Aboutus></Aboutus>
+    },
+    {path: 'collection',
+      element: <Collection></Collection>
     },
     {
       path:'blog',
@@ -42,6 +46,11 @@ let allRoutes = createBrowserRouter(
     {
       path:'prodDetails/:id',
       element:<ProdDetails></ProdDetails>
+    },
+    // dynamic routing
+    {
+      path:'buynow/:id',
+      element:<BuyNow></BuyNow>
     },
     // // Error Page
     // {

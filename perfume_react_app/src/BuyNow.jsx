@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import perfumes from './APIs/products';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
 import AddToCart from './AddToCart';
 import "./extra.css";
 
-export default function ProdDetails() {
+export default function BuyNow() {
+
 
     let uselocation = useLocation();
-    
     let currentId = uselocation.pathname.split('/')[2];
-    
     let details = perfumes[currentId-1];
 
-    let [quantity, setQuantity] = useState(0);
+    let [quantity, setQuantity] = useState(1);
 
     let setQuant = (event) => {
         if (event.target.innerText === '+'){
@@ -34,7 +33,11 @@ export default function ProdDetails() {
         }
         setQuantity(quantity);
     }
-    
+
+
+    let payment = ["Cash On Delivery", "UPI", "Debit Card", "Credit Card"]
+    let [showAns, setShowAns] = useState(false);
+
 
   return (
     <div className='prodDetails'>
@@ -61,13 +64,24 @@ export default function ProdDetails() {
             </div>
         </div>
 
-        <button className='addtocartButton' onClick={() => {AddToCart(details, quantity)}}>
-            Add to Cart <FontAwesomeIcon icon={faCartShopping} />
-        </button>
-        <button className='buyNowButton'>
-            <Link to={`/buynow/${currentId}`}>Buy Now</Link>
-            
-        </button>
+        <div className='modeOfPayment'>
+            <h2 onClick={() => setShowAns(!showAns)}>
+                Pay Now
+            </h2>
+            <div>
+                {payment.map((v, i) => {
+                    return(
+                        <div key={i}>
+                            <p className={showAns === true ? 'showans' : ''}>
+                                {v}
+                            </p>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+
+        
         </div>
     </div>
   )
