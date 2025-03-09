@@ -5,6 +5,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
 import AddToCart from './AddToCart';
 import "./extra.css";
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+import "react-notifications/lib/notifications.css";
 
 export default function ProdDetails() {
 
@@ -61,6 +63,7 @@ export default function ProdDetails() {
             </div>
         </div>
 
+        <NotificationContainer></NotificationContainer>
         <button className='addtocartButton' onClick={() => {AddToCart(details, quantity)}}>
             Add to Cart <FontAwesomeIcon icon={faCartShopping} />
         </button>
