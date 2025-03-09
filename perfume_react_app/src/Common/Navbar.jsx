@@ -27,7 +27,7 @@ export default function Navbar() {
                         <Link to={'/collection'}>Collection</Link>
                         </li>
                         <li className='nav-items'>
-                            <a href='#'>Contact-Us</a>
+                            <Link to={'/contact'}>Contact-Us</Link>
                         </li>
                         <li className='nav-items cartItems'>
                              <Link to={"/cart"}> <FontAwesomeIcon icon={faCartShopping} /> </Link>

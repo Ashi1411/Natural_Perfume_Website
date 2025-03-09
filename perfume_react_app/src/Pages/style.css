@@ -201,6 +201,8 @@ li{
 .footer-icons{
     font-size: 4.2rem;
     background-color: white;
+    cursor: pointer;
+
     margin: 2.4rem;
     padding: 0.5rem;
     border-radius: 50%;
@@ -276,3 +278,73 @@ li{
 }
 /***** End About-us page Section *****/
 
+
+/***** Contact-us Section *****/ 
+
+.contact-form{
+    /*background-color: #6e00fe;*/
+    gap: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.5) 2px 7px 29px 3px;
+    background-image: linear-gradient(to top right, #6e00fe, #8539e8, #8093f1, #8093f1);
+    border-radius: 2rem;
+    width: 100rem;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 3rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+
+    & img{
+        padding: 1rem;
+        width: 45rem;
+        height: 61rem;
+        margin: auto;
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+    }
+
+    & button{
+        margin: 2.5rem;
+        font-size: 2rem;
+        background-color: #8093f1;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        -webkit-border-radius: 1.5rem;
+        -moz-border-radius: 1.5rem;
+        -ms-border-radius: 1.5rem;
+        -o-border-radius: 1.5rem;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+
+        &:hover{
+            color: white;
+            background-color: black;
+        }
+}
+}
+
+.contact-us{
+    font-size: 2rem;
+    padding: 2rem;
+
+    & label{
+        margin: 3rem;
+        color: white;
+        font-weight: 500;
+    }
+
+    & input{
+        box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 1px;
+        padding: 0.5rem;
+        border: 0.1rem solid black;
+    }
+}
+/***** End Contact-us Section *****/

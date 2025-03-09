@@ -4,6 +4,7 @@ import perfumes from './APIs/products';
 import "./extra.css";
 import Remove from './Remove';
 
+
 export default function Cart() {
 
     
@@ -26,10 +27,12 @@ export default function Cart() {
             }})
     );
 
+    let totalPrice = filterProducts.reduce((accum, v) => {
+        return accum + (v.quantity * v.price);
+    }, 0)
 
-    // let filterProducts = perfumes.filter((v, i) => {
-    //     return listLocalStorage.some((curElem) => curElem.id === v.id);
-    // })
+
+    
 
     let handleRemove = (id) => {
         Remove(id, setCartItems)
@@ -63,8 +66,8 @@ export default function Cart() {
                         <p>{prod.quantity}</p>
                     </div>
                     <div>
-                        <p>{prod.price}</p>
-                        <p>Total Price : {prod.price * prod.quantity}</p>
+                        <p>₹{prod.price}</p>
+                        <p>Total Price : ₹{(prod.price * prod.quantity).toFixed(2)}</p>
                     </div>
                     <div className='quantity'>
                         <button> - </button>
@@ -79,6 +82,12 @@ export default function Cart() {
                 </div>
             )
         })}
+
+        <div className='totalBill'>
+            <p>Sub Total : ₹{(totalPrice).toFixed(2)}</p>
+            <p>Tax : ₹{(totalPrice * 0.05).toFixed(2)}</p>
+            <p className='totalPrice'>Total Price : ₹{(totalPrice + totalPrice * 0.05).toFixed(2)}</p>
+        </div>
 
     </div>
   )

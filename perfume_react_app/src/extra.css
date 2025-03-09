@@ -37,7 +37,6 @@ p{
 .prodCard{
     margin: auto;
     width: 38rem;
-    height: 57rem;
     margin-top: 4.2rem;
     padding: 2.4rem;
     box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 0px;
@@ -50,7 +49,7 @@ p{
     & img{
         width: 32rem;
         margin: auto;
-        height: 20rem;
+        height: 40rem;
         border-radius: 1.5rem;
         -webkit-border-radius: 1.5rem;
         -moz-border-radius: 1.5rem;
@@ -271,6 +270,21 @@ hr {
             background-color: #8539e8;
             color: white;
         }
+    }
+}
+
+.totalBill{
+    border-top: 0.1rem solid black;
+    padding: 2rem;
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    & .totalPrice{
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 0.1rem solid black;
     }
 }
 /***** End Cart Section *****/

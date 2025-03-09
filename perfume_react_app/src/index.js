@@ -30,7 +30,7 @@ let allRoutes = createBrowserRouter(
       element: <Collection></Collection>
     },
     {
-      path:'blog',
+      path:'contact',
       element:<Contact></Contact>
     },
     {
