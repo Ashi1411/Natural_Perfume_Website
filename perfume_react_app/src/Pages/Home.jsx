@@ -23,7 +23,7 @@ export default function Home() {
       <Navbar></Navbar>
 
       <section>
-        <div className="hero-section grid grid-cols-2 gap-[80px]">
+        <div className="hero-section grid grid-cols-2">
           <div className="hero-section-content items-center">
             <p className="text-5xl p-4 leading-[1.5]">
             "Fragrance is the poetry of memory, bottled into a moment."
@@ -45,15 +45,15 @@ export default function Home() {
             </button>
             </Link>
           </div>
-          <div>
-            <img src={hero_image} className="w-[600px] h-[400]" alt="Hero Section Image"></img>
+          <div className="hero-img">
+            <img src={hero_image} alt="Hero Section Image"></img>
           </div>
         </div>
       </section>
 
 
       <section className="properties-section">
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid grid-cols-4 gap-[4rem]">
           <div className="properties-card">
             <div className="property">
               <FontAwesomeIcon icon={faTruckFast} className="properties-icon"/>

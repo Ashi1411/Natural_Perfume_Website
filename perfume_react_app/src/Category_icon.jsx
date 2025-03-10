@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export default function Category_icon() {
   return (
     <div>
-        <div className="grid grid-cols-4 gap-[10rem]">
+        <div className="grid grid-cols-4 gap-[6rem]">
             {perfumeCategories.map((v, i) => {
                 return (
                     <div key={i} className="product-categories">

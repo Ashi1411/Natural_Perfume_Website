@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import {NotificationContainer, NotificationManager} from 'react-notifications';
-import "react-notifications/lib/notifications.css";
 
 export default function AddToCart(details, quant) {
   let storedCart = localStorage.getItem("addToCart");
@@ -44,18 +42,11 @@ export default function AddToCart(details, quant) {
         localStorage.setItem("addToCart", JSON.stringify(listLocalStorage));
 
         console.log("Updated Cart:", listLocalStorage);
-        NotificationManager.success("Added to Cart!", "Success");
-    }
-    else{
-      NotificationManager.error("Failed to Add!", "Error");
     }
 
     
     
   return (
-    <div>
-        <NotificationContainer></NotificationContainer>
-        
-    </div>
+    <div></div>
   )
 }
