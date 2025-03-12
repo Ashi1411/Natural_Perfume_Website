@@ -10,7 +10,7 @@ export default function Collection() {
   return (
     <div>
         <Navbar></Navbar>
-        <section>
+        <section className='products'>
             <div className='prodclass'>
                 <h1>Perfumes</h1>
             </div>

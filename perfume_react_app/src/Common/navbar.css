@@ -10,11 +10,15 @@ html{
 }
 
 img{
-    width: 200px;
+    width: 20rem;
 }
 
 li{
     font-size: 2.4rem;
+}
+
+.grid-two-cols{
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .navbar{
@@ -38,3 +42,52 @@ li{
 
     }
 }
+
+/***** Responsive design *****/ 
+@media (width < 1545px) {
+    html{
+        font-size: 56.25%;
+    }
+}
+
+@media (width < 1400px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (width < 1235px){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media (width < 1112px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media (width < 990px){
+    html{
+        font-size: 35%;
+    }
+}
+@media (width < 870px){
+    html{
+        font-size: 45%;
+    }
+}
+@media (width < 695px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media (width < 450px){
+    html{
+        font-size: 30%;
+    }
+}
+/***** End Responsive design *****/
+

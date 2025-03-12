@@ -53,11 +53,9 @@ export default function Home() {
 
 
       <section className="properties-section">
-        <div className="grid grid-cols-4 gap-[4rem]">
-          <div className="properties-card">
-            <div className="property">
-              <FontAwesomeIcon icon={faTruckFast} className="properties-icon"/>
-            </div>
+        <div className="grid grid-four-cols gap-[4rem]">
+          <div className="properties-card grid grid-two-cols">
+            <FontAwesomeIcon icon={faTruckFast} className="properties-icon"/>
           
             <div>
               <h1>
@@ -69,7 +67,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="properties-card grid grid-cols-2">
+          <div className="properties-card grid grid-two-cols">
           <FontAwesomeIcon icon={faRotate} className="properties-icon"/>
             <div>
               <h1>
@@ -81,7 +79,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="properties-card grid grid-cols-2">
+          <div className="properties-card grid grid-two-cols">
           <FontAwesomeIcon icon={faHandHoldingDollar} className="properties-icon"/>
             <div>
               <h1>
@@ -93,7 +91,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="properties-card grid grid-cols-2">
+          <div className="properties-card grid grid-two-cols">
           <FontAwesomeIcon icon={faHeadset} className="properties-icon"/>
             <div>
               <h1>
@@ -118,21 +116,23 @@ export default function Home() {
 
       <section>
         <h1 className="text-[4.2rem] font-[600] p-[4.2rem]">Customer Reviews</h1>
-        <div className="grid grid-cols-2">
-          {reviews.map((v, i) => {
-            return (
-              <div key={i} className="review-card">
-                <h1 className="text-[3.2rem] font-[500]">{v.customerName}</h1>
-                <p className="text-[2.4rem] p-[2rem]">{v.review}</p>
-              </div>
-            )
-          })}
+        <div className="customer-reviews">
+          <div className="grid grid-two-cols">
+            {reviews.map((v, i) => {
+              return (
+                <div key={i} className="review-card">
+                  <h1 className="text-[3.2rem] font-[500]">{v.customerName}</h1>
+                  <p className="text-[2.4rem] p-[2rem]">{v.review}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
 
-      <section>
+      <section className="brands">
         <h1 className="text-[4.2rem] font-[600] p-[4.2rem]">Our Top Brands</h1>
-        <div className="grid grid-cols-4 gap-[5rem]">
+        <div className="grid grid-four-cols gap-[5rem]">
           {
             brands.map((v, i) => {
               return(
@@ -146,53 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <footer>
-        <div className="footer-class grid grid-cols-4 gap-[10rem] bg-[#464545] mt-[30rem]">
-          <div>
-            <img src={weblogo}></img>
-            <p>Welcome to Perfumora! Symphony of Natural Scents</p>
-            <div className="grid grid-cols-3">
-            <FontAwesomeIcon icon={faYoutube} className="footer-icons"/>
-            <FontAwesomeIcon icon={faInstagram} className="footer-icons"/>
-            <FontAwesomeIcon icon={faFacebook} className="footer-icons"/>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text-[2.4rem] font-[600] p-[2.1rem] text-white">Categories</h1>
-            {perfumeCategories.map((v, i) => {
-                return (
-                    <div key={i}>
-                        <p>{v.category}</p>
-                    </div>
-                )
-            })}
-          </div>
-
-          <div>
-            <h1 className="text-[2.4rem] font-[600] p-[2.1rem] text-white">Top Brands</h1>
-            {brands.map((v, i) => {
-                return(
-                  <div key={i} >
-                    <p>{v.brand}</p>
-                  </div>
-                )
-              })
-            }
-            </div>
-
-            <div>
-            <h1 className="text-[2.4rem] font-[600] p-[2.1rem] text-white">Quick Links</h1>
-              <ul className="quick-links">
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-                <li>Return & Refund Policy</li>
-                <li>Become An Affiliate</li>
-                <li>Shipping policy</li>
-              </ul>
-            </div>
-        </div>
-      </footer> */}
       <Footer></Footer>
       
     </div>

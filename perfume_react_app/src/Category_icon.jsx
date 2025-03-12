@@ -1,12 +1,13 @@
 import React from 'react'
+import "./extra.css";
 import perfumeCategories from './APIs/categories'
 // import ShowProducts from './ShowProducts'
 import { Link } from 'react-router-dom'
 
 export default function Category_icon() {
   return (
-    <div>
-        <div className="grid grid-cols-4 gap-[6rem]">
+    <div className='category'>
+        <div className="grid grid-four-cols gap-[6rem]">
             {perfumeCategories.map((v, i) => {
                 return (
                     <div key={i} className="product-categories">

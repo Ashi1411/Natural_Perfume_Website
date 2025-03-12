@@ -21,7 +21,7 @@ export default function Products() {
   return (
     <div>
         <Navbar></Navbar>
-        <section>
+        <section className='products'>
             <div className='prodclass'>
                 <h1>{cat} Perfumes</h1>
             </div>

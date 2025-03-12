@@ -49,7 +49,7 @@ export default function ProdDetails() {
         <p>₹{details.price}</p>
         <p>Stock = {details.quantity}</p>
 
-        <div className='grid grid-cols-2'>
+        <div className='grid grid-two-cols'>
             <p>Quantity</p>
         
             <div className='quantity'>

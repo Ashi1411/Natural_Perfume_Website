@@ -4,13 +4,14 @@ import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg
 import perfumeCategories from '../APIs/categories';
 import weblogo from "../images/logo.png"
 import brands from '../APIs/brands';
+import "../extra.css";
 
 
 export default function Footer() {
   return (
     <div>
-        <footer>
-        <div className="footer-class grid grid-cols-4 gap-[10rem] bg-[#464545] mt-[30rem]">
+        <footer className='footer'>
+        <div className="footer-class grid grid-four-cols gap-[10rem] bg-[#464545] mt-[30rem]">
           <div>
             <img src={weblogo}></img>
             <p>Welcome to Perfumora! Symphony of Natural Scents</p>

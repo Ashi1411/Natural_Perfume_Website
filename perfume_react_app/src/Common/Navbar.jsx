@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
   return (
     <div>
-        <div className='navbar grid grid-cols-2  bg-[#b388eb]'>
+        <div className='navbar grid grid-two-cols  bg-[#b388eb]'>
             <div>
             <a href='#'>
                 <Link to={'/'}><img src={weblogo} className='rounded-[20px]' alt='Perfumora logo'></img></Link>

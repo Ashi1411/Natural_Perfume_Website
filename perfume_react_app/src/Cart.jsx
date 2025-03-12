@@ -45,39 +45,41 @@ export default function Cart() {
 
         {filterProducts.map((prod, i) => {
             return(
-                <div key={i} className='grid grid-cols-7 cart'>
-                    <div>
-                    <p className='font-[600]'>Categories</p>
-                        {prod.categories.map((cat, i) => {
-                            return (
-                                <div key={i} className='categories'>
-                                    <p>{cat}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                    <div>
-                        <img src={prod.image}></img>
-                    </div>
-                    <div>
-                        <p className='font-[600]'>{prod.name}</p>
-                    </div>   
-                    <div> 
-                        <p>{prod.quantity}</p>
-                    </div>
-                    <div>
-                        <p>₹{prod.price}</p>
-                        <p>Total Price : ₹{(prod.price * prod.quantity).toFixed(2)}</p>
-                    </div>
-                    <div className='quantity'>
-                        <button> - </button>
-                        <button className='font-[600]'> {prod.quantity} </button>
-                        <button> + </button>
-                    </div>
-                    <div>
-                        <button className='font-[600] remove-btn' onClick={() => handleRemove(prod.id)}>
-                            Remove
-                        </button>
+                <div className='cart-responsive'>
+                    <div key={i} className='grid grid-seven-cols cart'>
+                        <div>
+                        <p className='font-[600]'>Categories</p>
+                            {prod.categories.map((cat, i) => {
+                                return (
+                                    <div key={i} className='categories'>
+                                        <p>{cat}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div>
+                            <img src={prod.image}></img>
+                        </div>
+                        <div>
+                            <p className='font-[600]'>{prod.name}</p>
+                        </div>   
+                        <div> 
+                            <p>{prod.quantity}</p>
+                        </div>
+                        <div>
+                            <p>₹{prod.price}</p>
+                            <p>Total Price : ₹{(prod.price * prod.quantity).toFixed(2)}</p>
+                        </div>
+                        <div className='quantity'>
+                            <button> - </button>
+                            <button className='font-[600]'> {prod.quantity} </button>
+                            <button> + </button>
+                        </div>
+                        <div>
+                            <button className='font-[600] remove-btn' onClick={() => handleRemove(prod.id)}>
+                                Remove
+                            </button>
+                        </div>
                     </div>
                 </div>
             )
