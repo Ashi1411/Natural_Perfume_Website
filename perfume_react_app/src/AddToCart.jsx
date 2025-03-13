@@ -1,19 +1,6 @@
-import { useEffect, useState } from "react";
-
 export default function AddToCart(details, quant) {
   let storedCart = localStorage.getItem("addToCart");
   let listLocalStorage = storedCart ? JSON.parse(storedCart) : [];
-  // let [added, setAdded] = useState(null);
-
-  // useEffect(() => {
-  //   if (added === true){
-  //     NotificationManager.success("Added to Cart!", "Success");
-  //   }
-  //   else{
-  //     NotificationManager.error("Failed to Add!", "Error");
-  //   }
-  // }, [added])
-
 
     if (quant > 0){
         let newDetails = {
@@ -29,13 +16,11 @@ export default function AddToCart(details, quant) {
         let existingItem = listLocalStorage.find((item) => item.id === newDetails.id);
 
         if (existingItem) {
-          // Update quantity if the product exists
           listLocalStorage = listLocalStorage.map((item) =>
               item.id === newDetails.id ? { ...item, quantity: quant } : item
           );
         }
         else {
-         // Add new item to the cart
          listLocalStorage.push(newDetails);
         }
 

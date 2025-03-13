@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import perfumes from './APIs/products';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCartShopping, faStar } from '@fortawesome/free-solid-svg-icons';
-import AddToCart from './AddToCart';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import "./extra.css";
 
 export default function BuyNow() {

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Common/Navbar";
 import './style.css';
-import hero_image from "../images/hero_image.webp"
+import hero_image from "../images/hero_section_image.png"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHandHoldingDollar, faHeadset, faRotate, faTruckFast} from "@fortawesome/free-solid-svg-icons"
 import Category_icon from "../Category_icon";

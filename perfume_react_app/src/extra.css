@@ -159,7 +159,6 @@ hr {
     }
 
     & .addtocartButton{
-        /* display: block; */
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
         margin-top: 5rem;
         font-size: 3rem;
@@ -184,7 +183,6 @@ hr {
     }
 
     & .buyNowButton{
-        /* display: block; */
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
         margin-top: 5rem;
         margin: 2.4rem;
@@ -216,10 +214,8 @@ hr {
     margin: 8rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
     padding: 2rem;
-    /* margin: auto; */
 
     & div{
-        /* margin: 2rem; */
         margin: auto;
     }
 

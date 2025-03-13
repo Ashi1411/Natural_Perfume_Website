@@ -11,10 +11,6 @@ export default function Cart() {
 
     const [cartItems, setCartItems] = useState([]);
 
-    // let storedCart = localStorage.getItem("addToCart");
-    // let listLocalStorage = storedCart ? JSON.parse(storedCart) : [];
-    // listLocalStorage = [...listLocalStorage];
-
     useEffect(() => {
         let storedCart = localStorage.getItem("addToCart");
         setCartItems(storedCart ? JSON.parse(storedCart) : []);

@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../Common/Navbar'
 import { Link } from 'react-router-dom'
-import Products from '../Products'
 import perfumes from '../APIs/products'
 import './style.css';
 import Footer from '../Common/Footer'

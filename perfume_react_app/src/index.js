@@ -17,7 +17,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 let allRoutes = createBrowserRouter(
   [
-    // static routing
     {
       path:'/',
       element:<Home></Home>
@@ -37,17 +36,14 @@ let allRoutes = createBrowserRouter(
       path:'cart',
       element:<Cart></Cart>
     },
-    // dynamic routing
     {
       path:'products/:id',
       element:<Products></Products>
     },
-    // dynamic routing
     {
       path:'prodDetails/:id',
       element:<ProdDetails></ProdDetails>
     },
-    // dynamic routing
     {
       path:'buynow/:id',
       element:<BuyNow></BuyNow>

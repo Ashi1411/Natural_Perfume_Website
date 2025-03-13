@@ -1,7 +1,6 @@
 import React from 'react'
 import "./extra.css";
 import perfumeCategories from './APIs/categories'
-// import ShowProducts from './ShowProducts'
 import { Link } from 'react-router-dom'
 
 export default function Category_icon() {
